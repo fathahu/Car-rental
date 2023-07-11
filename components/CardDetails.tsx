@@ -59,7 +59,7 @@ const CardDetails = ({ open, closeModal, car }: CarDetailsProps) => {
                       <Image src={genarateCarImageUrl(car,'29')} alt='Car' fill priority className='object-contain' />
                     </div>
                     <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg ">
-                      <Image src={genarateCarImageUrl(car,'33')} alt='Car' fill priority className='object-contain ' />
+                      <Image src={genarateCarImageUrl(car,'33')} alt='Car' fill priority className='object-contain mt-4' />
                     </div>
                     <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                       <Image src={genarateCarImageUrl(car,'13')} alt='Car' fill priority className='object-contain' />

@@ -11,7 +11,7 @@ export interface customButonProps {
     isDisabled?:boolean;
 }
 export interface SearchManufacturerProps {
-    manufacturer: 'string';
+    manufacturer: string;
     setManufacturer: (manufacturer: string) => void;
 }
 
