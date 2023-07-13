@@ -17,7 +17,7 @@ export default  function Home() {
   const [year, setYear] = useState(2022);
 
   //pagination state
-  const [limit, setLimit] = useState(10)
+  const [limit, setLimit] = useState(12)
 
   const getCars = async () => {
     setLoading(true);
@@ -27,7 +27,7 @@ export default  function Home() {
         model: model || '',
         fuel: fuel || '',
         year: year || 2022,
-        limit: limit || 10,
+        limit: limit || 12,
     });
     setAllcars(result); 
   
@@ -82,7 +82,7 @@ return (
               />
             </div>
           )}
-          <ShowMore pageNumber={(limit || 10) / 10} isNext={limit  > allcars.length} setLimit = {setLimit} />
+          <ShowMore pageNumber={(limit || 12) / 12} isNext={limit  > allcars.length} setLimit = {setLimit} />
         </section>
       ) : (
         <div>

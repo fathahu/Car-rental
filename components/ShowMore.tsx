@@ -8,7 +8,7 @@ import { updateSeatchParams } from "@/utils";
 const ShowMore = ({pageNumber,isNext,setLimit}:ShowMoreProps) => {
     const router =  useRouter();
     const handleNavigation = () =>{
-        const newLimit = (pageNumber + 1) * 10;
+        const newLimit = (pageNumber + 1) * 12;
         // const newPathName = updateSeatchParams("limit", `${newLimit}`);
         // router.push(newPathName);
         setLimit(newLimit);
