@@ -5,7 +5,7 @@ import { Listbox, Transition } from '@headlessui/react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Fragment, useState } from 'react'
-const CustomFilter = ({ title, options }: CustomFilterProps) => {
+const CustomFilter = ({ title, options,setFilter }: CustomFilterProps) => {
   const [selected, setSelected] = useState(options[0])
 
   const router = useRouter();
@@ -20,7 +20,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
         value={selected}
         onChange={(e) => {
           setSelected(e);
-          handleUpdateParams(e);
+          setFilter(e.value);
         }
         }
       >
@@ -46,7 +46,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
                 <Listbox.Option
                   key={option.title}
                   value={option}
-                  className={({ active }) => `relative cursor-default select-none py-2 px-4 
+                  className={({ active }) => `relative cursor-default select-none py-2 px-4 z-30
                 ${active ?
                       'bg-primary-blue text-white'
                       :
